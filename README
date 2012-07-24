@@ -1,4 +1,6 @@
 A simple image scraper.
 
+*NOTE: to run this, you'll need all the required gems.
+	Install these by running 'bundle install' 
 
-INSTALLATION: run 'rake install' (requires Ruby 3+)
+

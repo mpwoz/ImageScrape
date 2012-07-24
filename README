@@ -1,8 +1,14 @@
-A simple image scraper.
+A simple image scraper.  Utility to get many square tiles of images for a Photomosaic generator.
 
 *NOTE: to run this, you'll need all the required gems.
 	Install these by running 'bundle install' 
-
 	Alternatively, run 'bundle install --local' to install a local copy of gems.
 
+
+TODO : Separate all the classes into their own files
+
+
+Credit
+ Loosely based off the code found here:
+ http://joezack.com/index.php/2009/03/04/scraping-and-saving-flickr-images-with-ruby/
 

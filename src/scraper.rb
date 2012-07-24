@@ -4,10 +4,31 @@ require "nokogiri"
 require "open-uri"
 
 class FileDownloader
+	attr_accessor :dir
+
 	def initialize download_dir
+		@dir = download_dir
+		create_if_missing @dir
+	end
+
+	def create_if_missing dir
+		Dir.mkdir dir unless File.directory? dir
+	end
+
+	def get_file_from_url url
+		url.match(/(\w+)\.jpg/).to_s
+	end
+
+	def get_save_path url
+		@dir + "/" + get_file_from_url(url)
 	end
 
 	def download url
+		response = Net::HTTP.get(URI.parse(url))
+		save_path = get_save_path url
+		open(save_path, "wb") do |file|
+			file.write response
+		end
 	end
 end
 

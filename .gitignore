@@ -1,4 +1,3 @@
 .bundle
 *.swp
-./vendor
 vendor/

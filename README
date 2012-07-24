@@ -1,1 +1,4 @@
 A simple image scraper.
+
+
+INSTALLATION: run 'rake install' (requires Ruby 3+)
